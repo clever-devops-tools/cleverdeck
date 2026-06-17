@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CleverIT — Presentaciones</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cl-primary: #1A56FF;
+      --cl-cyan:    #00C8E0;
+      --cl-dark:    #060B18;
+      --cl-surface: #0D1B35;
+      --cl-border:  #1E3564;
+      --cl-text:    #E8F0FF;
+      --cl-muted:   #7A9CC4;
+    }
+
+    body {
+      background: var(--cl-dark);
+      color: var(--cl-text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .chip {
+      display: inline-block;
+      background: rgba(26,86,255,0.15);
+      border: 1px solid var(--cl-primary);
+      color: var(--cl-cyan);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.15;
+      background: linear-gradient(135deg, #fff 0%, var(--cl-cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: var(--cl-muted);
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 780px;
+    }
+
+    .card {
+      background: var(--cl-surface);
+      border: 1px solid var(--cl-border);
+      border-radius: 16px;
+      padding: 28px 24px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--cl-primary), var(--cl-cyan));
+    }
+    .card:hover {
+      border-color: var(--cl-primary);
+      transform: translateY(-3px);
+    }
+
+    .card-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--cl-cyan);
+    }
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+    }
+    .card-desc {
+      font-size: 0.82rem;
+      color: var(--cl-muted);
+      line-height: 1.6;
+    }
+    .card-footer {
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: var(--cl-primary);
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.78rem;
+      color: var(--cl-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="chip">CleverIT · Presentaciones</div>
+  <h1>Deck de Presentaciones</h1>
+  <p class="subtitle">Propuestas y casos de éxito · Reliability & Observability</p>
+
+  <div class="grid">
+    <a class="card" href="./falabella/">
+      <div class="card-tag">Caso de Éxito · 2025–2026</div>
+      <div class="card-title">Falabella DevOps Intelligence Platform</div>
+      <div class="card-desc">
+        Cómo centralizamos métricas DORA y DX Core 4 para 1,897 repositorios y 212 aplicaciones en uno de los ecosistemas de desarrollo más grandes de Latam.
+      </div>
+      <div class="card-footer">Ver presentación →</div>
+    </a>
+
+    <a class="card" href="./pacifico/">
+      <div class="card-tag">Propuesta de Servicio · 2026</div>
+      <div class="card-title">ROCE — Reliability & Observability Center of Excellence</div>
+      <div class="card-desc">
+        Servicio administrado de observabilidad para Pacífico: 5 componentes, modelo en 2 fases, KPIs de ingeniería y visibilidad ejecutiva en tiempo real.
+      </div>
+      <div class="card-footer">Ver presentación →</div>
+    </a>
+  </div>
+
+  <footer>CleverIT · clever-devops-tools · 2026</footer>
+</body>
+</html>

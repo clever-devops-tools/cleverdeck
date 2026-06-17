@@ -1,0 +1,13 @@
+{
+  "name": "pacifico-roce-propuesta",
+  "private": true,
+  "scripts": {
+    "dev": "slidev slides.md",
+    "build": "slidev build slides.md --base /cleverdeck/pacifico/ --out ../dist/pacifico",
+    "export": "slidev export slides.md"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.52.0",
+    "@slidev/theme-default": "^0.23.0"
+  }
+}

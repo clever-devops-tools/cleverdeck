@@ -1,0 +1,13 @@
+{
+  "name": "falabella-caso-exito",
+  "private": true,
+  "scripts": {
+    "dev": "slidev slides.md",
+    "build": "slidev build slides.md --base /cleverdeck/falabella/ --out ../dist/falabella",
+    "export": "slidev export slides.md"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.52.0",
+    "@slidev/theme-default": "^0.23.0"
+  }
+}

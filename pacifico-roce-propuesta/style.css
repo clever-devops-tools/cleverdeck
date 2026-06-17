@@ -1,0 +1,472 @@
+/* ─── CleverIT Brand Theme ─────────────────────────────────────── */
+:root {
+  --cl-primary:  #1A56FF;
+  --cl-cyan:     #00C8E0;
+  --cl-dark:     #060B18;
+  --cl-surface:  #0D1B35;
+  --cl-surface2: #132040;
+  --cl-border:   #1E3564;
+  --cl-text:     #E8F0FF;
+  --cl-muted:    #7A9CC4;
+  --cl-green:    #20E3A0;
+  --cl-amber:    #FFB930;
+  --cl-red:      #FF5E5E;
+  --cl-grad:     linear-gradient(135deg, #0D1B35 0%, #060B18 100%);
+}
+
+.slidev-layout {
+  background: var(--cl-grad);
+  color: var(--cl-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.slidev-layout.cover { background: var(--cl-dark); }
+
+/* ─── Cover ─────────────────────────────────────────────────────── */
+.cover-chip {
+  display: inline-block;
+  background: rgba(26,86,255,0.18);
+  border: 1px solid var(--cl-primary);
+  color: var(--cl-cyan);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 100px;
+  margin-bottom: 1.6rem;
+}
+.cover-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1.15;
+  background: linear-gradient(135deg, #fff 0%, var(--cl-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.6rem;
+}
+.cover-acronym {
+  font-size: 1.1rem;
+  color: var(--cl-muted);
+  margin-bottom: 2rem;
+}
+.cover-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.cover-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--cl-surface);
+  border: 1px solid var(--cl-border);
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  color: var(--cl-muted);
+}
+.cover-badge strong { color: var(--cl-text); }
+
+/* ─── Section Label + Title ────────────────────────────────────── */
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--cl-cyan);
+  margin-bottom: 6px;
+}
+.section-title {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+.section-desc {
+  font-size: 0.9rem;
+  color: var(--cl-muted);
+  margin-bottom: 1.2rem;
+}
+.cl-divider {
+  height: 1px;
+  background: linear-gradient(90deg, var(--cl-primary) 0%, transparent 100%);
+  margin: 12px 0 16px;
+}
+
+/* ─── Problem Cards ───────────────────────────────────────────── */
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 1.2rem;
+}
+.problem-card {
+  background: var(--cl-surface);
+  border: 1px solid rgba(255,94,94,0.25);
+  border-radius: 12px;
+  padding: 22px 18px;
+}
+.problem-icon { font-size: 1.8rem; margin-bottom: 10px; }
+.problem-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.problem-desc {
+  font-size: 0.8rem;
+  color: var(--cl-muted);
+  line-height: 1.5;
+}
+
+/* ─── Service Components ──────────────────────────────────────── */
+.components-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1rem;
+}
+.component-row {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 14px;
+  align-items: center;
+  background: var(--cl-surface);
+  border: 1px solid var(--cl-border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  position: relative;
+  overflow: hidden;
+}
+.component-row::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--cl-primary), var(--cl-cyan));
+}
+.comp-num {
+  width: 28px; height: 28px;
+  border-radius: 8px;
+  background: rgba(26,86,255,0.2);
+  border: 1px solid var(--cl-primary);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--cl-cyan);
+}
+.comp-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+}
+.comp-desc {
+  font-size: 0.78rem;
+  color: var(--cl-muted);
+}
+
+/* ─── Timeline (Phase 1) ──────────────────────────────────────── */
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-top: 1.5rem;
+  position: relative;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: 14%;
+  right: 14%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cl-primary), var(--cl-cyan));
+  z-index: 0;
+}
+.tl-phase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.tl-dot {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--cl-surface);
+  border: 2px solid var(--cl-primary);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+}
+.tl-weeks {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cl-cyan);
+  margin-bottom: 4px;
+}
+.tl-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.tl-items {
+  list-style: none;
+  padding: 0; margin: 0;
+  text-align: left;
+}
+.tl-items li {
+  font-size: 0.74rem;
+  color: var(--cl-muted);
+  padding: 3px 0;
+  padding-left: 10px;
+  position: relative;
+}
+.tl-items li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--cl-cyan);
+}
+
+/* ─── Phase 2 ─────────────────────────────────────────────────── */
+.phase2-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 1.2rem;
+}
+.phase2-card {
+  background: var(--cl-surface);
+  border: 1px solid var(--cl-border);
+  border-radius: 12px;
+  padding: 20px;
+}
+.phase2-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.phase2-items {
+  list-style: none;
+  padding: 0; margin: 0;
+}
+.phase2-items li {
+  font-size: 0.82rem;
+  color: var(--cl-muted);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--cl-border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.phase2-items li:last-child { border-bottom: none; }
+.phase2-items li::before {
+  content: '›';
+  color: var(--cl-cyan);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* ─── KPI Table ───────────────────────────────────────────────── */
+.kpi-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.82rem;
+}
+.kpi-table th {
+  text-align: left;
+  padding: 10px 14px;
+  background: rgba(26,86,255,0.15);
+  color: var(--cl-cyan);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid var(--cl-border);
+}
+.kpi-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--cl-border);
+  color: var(--cl-text);
+}
+.kpi-table tr:last-child td { border-bottom: none; }
+.kpi-table tr:hover td { background: rgba(26,86,255,0.05); }
+.kpi-target {
+  display: inline-block;
+  background: rgba(32,227,160,0.12);
+  border: 1px solid rgba(32,227,160,0.25);
+  color: var(--cl-green);
+  border-radius: 100px;
+  padding: 2px 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ─── Stats Grid ──────────────────────────────────────────────── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 1.2rem;
+}
+.stat-card {
+  background: var(--cl-surface);
+  border: 1px solid var(--cl-border);
+  border-radius: 12px;
+  padding: 20px 14px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cl-primary), var(--cl-cyan));
+}
+.stat-num {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.stat-label {
+  font-size: 0.74rem;
+  color: var(--cl-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ─── Why CleverIT ────────────────────────────────────────────── */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 1.2rem;
+}
+.why-card {
+  background: var(--cl-surface);
+  border: 1px solid var(--cl-border);
+  border-radius: 10px;
+  padding: 18px 12px;
+  text-align: center;
+}
+.why-icon { font-size: 1.8rem; margin-bottom: 10px; }
+.why-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.why-desc {
+  font-size: 0.72rem;
+  color: var(--cl-muted);
+  line-height: 1.4;
+}
+
+/* ─── Engagement Model ────────────────────────────────────────── */
+.engagement-grid {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  gap: 16px;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.eng-phase {
+  background: var(--cl-surface);
+  border: 1px solid var(--cl-border);
+  border-radius: 12px;
+  padding: 24px 20px;
+}
+.eng-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--cl-cyan);
+  margin-bottom: 8px;
+}
+.eng-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.eng-duration {
+  font-size: 0.82rem;
+  color: var(--cl-primary);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.eng-items {
+  list-style: none;
+  padding: 0; margin: 0;
+}
+.eng-items li {
+  font-size: 0.8rem;
+  color: var(--cl-muted);
+  padding: 4px 0;
+  border-bottom: 1px solid var(--cl-border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.eng-items li:last-child { border-bottom: none; }
+.eng-items li::before {
+  content: '✓';
+  color: var(--cl-green);
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+.eng-arrow { font-size: 2rem; color: var(--cl-cyan); text-align: center; }
+
+/* ─── Next Steps ──────────────────────────────────────────────── */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 1.5rem;
+}
+.step-card {
+  background: var(--cl-surface);
+  border: 1px solid var(--cl-border);
+  border-radius: 12px;
+  padding: 24px 18px;
+}
+.step-num {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--cl-primary);
+  margin-bottom: 12px;
+  opacity: 0.8;
+}
+.step-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.step-desc {
+  font-size: 0.8rem;
+  color: var(--cl-muted);
+  line-height: 1.5;
+}
+
+/* ─── Mermaid ──────────────────────────────────────────────────── */
+.slidev-code { font-family: 'JetBrains Mono', monospace; }
