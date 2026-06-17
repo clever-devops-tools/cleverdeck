@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "slidev slides.md",
-    "build": "slidev build slides.md --base /falabella/ --out ../dist/falabella",
+    "build": "slidev build slides.md --base /cleverdeck/falabella/ --out ../dist/falabella",
     "export": "slidev export slides.md"
   },
   "dependencies": {
