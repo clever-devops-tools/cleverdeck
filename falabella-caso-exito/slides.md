@@ -8,6 +8,7 @@ fonts:
 drawings:
   persist: false
 transition: fade
+routerMode: hash
 ---
 
 <div class="cover-chip">Caso de Éxito · 2025–2026</div>
