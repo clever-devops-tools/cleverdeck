@@ -8,7 +8,6 @@ fonts:
 drawings:
   persist: false
 transition: fade
-routerMode: hash
 ---
 
 <div class="cover-chip">Propuesta de Servicio · 2026</div>
