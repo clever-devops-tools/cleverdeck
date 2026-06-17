@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "slidev slides.md",
-    "build": "slidev build slides.md --base /cleverdeck/pacifico/ --out ../dist/pacifico",
+    "build": "slidev build slides.md --base /pacifico/ --out ../dist/pacifico",
     "export": "slidev export slides.md"
   },
   "dependencies": {
